@@ -47,10 +47,10 @@ Run the Docker containers. `-d` daemonizes them so that they run in the backgrou
 
 If you execute `sudo docker ps` you should see something similar to the below text:
 
-    CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS                  PORTS                          NAMES
-    d0fd98308282        watermonitor_telegraf   "/entrypoint.sh tele…"   7 seconds ago       Up 5 seconds            8092/udp, 8125/udp, 8094/tcp   watermonitor_telegraf_1
-    72c78d68a070        watermonitor_grafana    "/run.sh"                7 seconds ago       Up 3 seconds   0.0.0.0:3000->3000/tcp         watermonitor_grafana_1
-    b86fa9c47a35        influxdb                "/entrypoint.sh infl…"   9 seconds ago       Up 7 seconds            0.0.0.0:8086->8086/tcp         watermonitor_influxdb_1
+    CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                          NAMES
+    c550e4d8e9ba        watermonitor_grafana    "/run.sh"                About an hour ago   Up About an hour    0.0.0.0:3000->3000/tcp         watermonitor_grafana_1
+    99ef98096e03        watermonitor_telegraf   "/entrypoint.sh tele…"   About an hour ago   Up About an hour    8092/udp, 8125/udp, 8094/tcp   watermonitor_telegraf_1
+    5ba9311117d1        influxdb                "/entrypoint.sh infl…"   About an hour ago   Up About an hour    0.0.0.0:8086->8086/tcp         watermonitor_influxdb_1
 
 Congratulations! You're now running Grafana, InfluxDB, and Telegraf on your machine! Time to explore it and get familiar.
 
