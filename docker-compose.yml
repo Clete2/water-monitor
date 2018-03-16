@@ -8,7 +8,6 @@ services:
     ports:
       - "8086:8086"
   grafana:
-    image: "grafana/grafana"
     restart: always
     depends_on:
       - influxdb
@@ -18,6 +17,9 @@ services:
       - grafanadata:/var/lib/grafana
     links:
       - influxdb
+    build:
+      context: .
+      dockerfile: Dockerfile-grafana
 volumes:
   influxdata:
   grafanadata:
