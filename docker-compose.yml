@@ -18,8 +18,14 @@ services:
     links:
       - influxdb
     build:
-      context: .
+      context: grafana/
       dockerfile: Dockerfile-grafana
+  telegraf:
+    build:
+      context: telegraf/
+      dockerfile: Dockerfile-telegraf
+    links:
+      - influxdb
 volumes:
   influxdata:
   grafanadata:

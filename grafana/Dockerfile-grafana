@@ -1,0 +1,4 @@
+FROM grafana/grafana
+ADD datasources.yml /etc/grafana/provisioning/datasources/datasources.yml
+ADD internet_uptime_monitor_rev4.json /etc/grafana/provisioning/dashboards/internet_uptime_monitor_rev4.json
+ADD dashboard.yml /etc/grafana/provisioning/dashboards/dashboard.yml
